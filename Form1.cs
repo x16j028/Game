@@ -12,7 +12,7 @@ namespace Game
 {
     public partial class Form1 : Form
     {
-        int speed = 10;
+        int speed = 5;
         int moveX;
         int moveY;
         public Form1()
@@ -92,6 +92,11 @@ namespace Game
             if (e.KeyCode == Keys.Right)
             {
                 moveX = 0;
+            }
+            if(e.KeyCode == Keys.Space)
+            {
+                pictureBox2.Left = pictureBox1.Left;
+                pictureBox2.Top = pictureBox1.Top;
             }
         }
     }
